@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Contact info </h2>
+<mat-dialog-content class="mat-typography">
+
+  <div class="form">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input [(ngModel)]="contact.name" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Last name</mat-label>
+      <input [(ngModel)]="contact.lastName" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Phone number</mat-label>
+      <input [(ngModel)]="contact.phoneNumber" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Date of birth</mat-label>
+      <input [(ngModel)]="contact.dateOfBirth" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input type="email" [(ngModel)]="contact.email" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <input [(ngModel)]="contact.address" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Post code</mat-label>
+      <input type="number" [(ngModel)]="contact.postCode" matInput>
+    </mat-form-field>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="save()">Save</button>
+</mat-dialog-actions>
